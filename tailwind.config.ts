@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Kid-friendly color palette
+				"kid-green": "#F2FCE2",
+				"kid-yellow": "#FEF7CD",
+				"kid-pink": "#FFDEE2",
+				"kid-peach": "#FDE1D3",
+				"kid-blue": "#D3E4FD",
+				"kid-purple": "#E5DEFF",
+				"kid-primary": "#9b87f5",
+				"kid-orange": "#F97316",
+				"kid-sky": "#33C3F0",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +95,49 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				"bounce-light": {
+					"0%, 100%": {
+						transform: "translateY(0)",
+					},
+					"50%": {
+						transform: "translateY(-10px)",
+					},
+				},
+				"pop": {
+					"0%": {
+						transform: "scale(0.95)",
+						opacity: "0.5",
+					},
+					"50%": {
+						transform: "scale(1.05)",
+					},
+					"100%": {
+						transform: "scale(1)",
+						opacity: "1",
+					},
+				},
+				"star-shine": {
+					"0%": {
+						transform: "scale(1) rotate(0deg)",
+						opacity: "0.8",
+					},
+					"50%": {
+						transform: "scale(1.2) rotate(20deg)",
+						opacity: "1",
+					},
+					"100%": {
+						transform: "scale(1) rotate(0deg)",
+						opacity: "0.8",
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				"bounce-light": "bounce-light 2s ease-in-out infinite",
+				"pop": "pop 0.3s ease-in-out forwards",
+				"star-shine": "star-shine 2s ease-in-out infinite",
 			}
 		}
 	},
