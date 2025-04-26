@@ -8,6 +8,7 @@ interface NavigationButtonProps {
   disabled?: boolean;
   children: React.ReactNode;
   primary?: boolean;
+  onClick?: () => void;
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({
@@ -15,12 +16,14 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
   disabled = false,
   children,
   primary = true,
+  onClick,
 }) => {
   const { setCurrentScene } = useGame();
 
   const handleClick = () => {
     setCurrentScene(to);
     window.scrollTo(0, 0);
+    if (onClick) onClick();
   };
 
   return (

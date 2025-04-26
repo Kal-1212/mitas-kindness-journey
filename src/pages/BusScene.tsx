@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Bus } from 'lucide-react';
 import SceneContainer from '@/components/SceneContainer';
@@ -6,6 +5,7 @@ import NavigationButton from '@/components/NavigationButton';
 import CharacterDialog from '@/components/CharacterDialog';
 import KindnessStar from '@/components/KindnessStar';
 import { useGame } from '@/contexts/GameContext';
+import Button from '@/components/Button';
 
 const BusScene: React.FC = () => {
   const { markSceneCompleted } = useGame();
@@ -58,7 +58,6 @@ const BusScene: React.FC = () => {
             <div className="flex justify-center mt-8">
               <Button 
                 onClick={() => setGameState('game')}
-                className="bg-kid-primary hover:bg-kid-primary/80 text-white rounded-full px-6 py-3"
               >
                 Continue
               </Button>

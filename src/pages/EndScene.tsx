@@ -8,6 +8,10 @@ import { useGame } from '@/contexts/GameContext';
 const EndScene: React.FC = () => {
   const { stars, resetGame } = useGame();
   
+  const handlePlayAgain = () => {
+    resetGame();
+  };
+  
   return (
     <SceneContainer 
       title="Congratulations!" 
@@ -64,7 +68,8 @@ const EndScene: React.FC = () => {
         <div className="flex justify-center mt-12">
           <NavigationButton 
             to="start" 
-            onClick={resetGame}
+            primary={true}
+            onClick={handlePlayAgain}
           >
             Play Again
           </NavigationButton>
